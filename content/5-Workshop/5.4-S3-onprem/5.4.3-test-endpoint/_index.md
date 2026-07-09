@@ -1,59 +1,101 @@
 ---
-title : "Test the Interface Endpoint"
-date : 2024-01-01
-weight : 3
-chapter : false
-pre : " <b> 5.4.3 </b> "
+title: "Backend Flow, S3, SQS, DynamoDB and CloudWatch Logs"
+date: 2024-01-01
+weight: 3
+chapter: false
+pre: " <b>5.4.3 </b> "
 ---
 
-#### Get the regional DNS name of S3 interface endpoint
-1. From the Amazon VPC menu, choose Endpoints.
+# 5.4.3 Backend Flow, S3, SQS, DynamoDB and CloudWatch Logs
 
-2. Click the name of newly created endpoint: s3-interface-endpoint. Click details and save the regional DNS name of the endpoint (the first one) to your text-editor for later use. 
+## Overview
 
-![dns name](/images/5-Workshop/5.4-S3-onprem/dns.png)
+After submitting the stock analysis request from the dashboard, I continued checking the backend processing flow of the **AWS Stock Analyzer** project.
 
+In this step, I did not focus on deploying the full AWS infrastructure. My role was to verify the system behavior from the perspective of a **QA Tester** by checking whether the request flow followed the expected backend architecture.
 
-#### Connect to EC2 instance in "VPC On-prem"
+The expected flow was:
 
-1. Navigate to **Session manager** by typing "session manager" in the search box 
+**Frontend → API Gateway → Lambda Ingestion → Yahoo Finance API → S3 → SQS → Lambda Processing → DynamoDB → Dashboard**
 
-2. Click **Start Session**, and select the EC2 instance named **Test-Interface-Endpoint**. This EC2 instance is running in "VPC On-prem" and will be used to test connectivty to Amazon S3 through the Interface endpoint we just created. Session Manager will open a new browser tab with a shell prompt: **sh-4.2 $**
+---
 
-![Start session](/images/5-Workshop/5.4-S3-onprem/start-session.png)
+## Testing Objective
 
-3. Change to the ssm-user's home directory with command "cd ~"
+The objective of this test was to verify that the backend services worked together correctly after a stock analysis request was submitted.
 
-4. Create a file named testfile2.xyz
-```
-fallocate -l 1G testfile2.xyz
-```
+The main points checked were:
 
-![user](/images/5-Workshop/5.4-S3-onprem/cli1.png)
+- Whether the request was sent from the frontend.
+- Whether the ingestion process could call the data source.
+- Whether raw stock data was stored in Amazon S3.
+- Whether the message was sent through Amazon SQS.
+- Whether the processing Lambda handled the data.
+- Whether processed data was saved to DynamoDB.
+- Whether logs could be reviewed in CloudWatch.
 
+---
 
-5. Copy file to the same S3 bucket we created in section 3.2
+## Backend Processing Flow
 
-```
-aws s3 cp --endpoint-url https://bucket.<Regional-DNS-Name> testfile2.xyz s3://<your-bucket-name>
-``` 
-+ This command requires the --endpoint-url parameter, because you need to use the endpoint-specific DNS name to access S3 using an Interface endpoint.
-+ Do not include the leading ' * ' when copying/pasting the regional DNS name.
-+ Provide your S3 bucket name created earlier
+When I submitted the analysis request for **VNM**, the backend was expected to process the request through several AWS services.
 
-![copy file](/images/5-Workshop/5.4-S3-onprem/cli2.png)
+First, the ingestion Lambda function called the **Yahoo Finance API** to retrieve stock data. After that, the raw stock data was stored in **Amazon S3**.
 
+Next, a message was sent to **Amazon SQS** so that the processing step could be handled asynchronously. The processing Lambda then received the message, processed the stock data, and saved the result into **Amazon DynamoDB**.
 
-Now the file has been added to your S3 bucket. Let check your S3 bucket in the next step.
+Finally, the dashboard displayed the processed result to the user.
 
-#### Check Object in S3 bucket
+---
 
-1. Navigate to S3 console
-2. Click Buckets
-3. Click the name of your bucket and you will see testfile2.xyz has been added to your bucket
+## CloudWatch Logs Checking
 
-![check bucket](/images/5-Workshop/5.4-S3-onprem/check-bucket.png)
+To verify the backend process, I checked the related logs in **Amazon CloudWatch**.
 
+CloudWatch logs were useful for checking:
 
+- Whether the Lambda function was triggered.
+- Whether the stock symbol request was received.
+- Whether the Yahoo Finance API call was executed.
+- Whether the data processing step completed.
+- Whether there were any errors during backend execution.
 
+---
 
+## Testing Evidence
+
+The following image shows the backend flow checking and related log/error information.
+
+![Backend Flow and Bedrock Issue](../5.PNG)
+
+---
+
+## Expected Result
+
+The expected result was that the system should:
+
+- Receive the stock analysis request successfully.
+- Retrieve stock data from Yahoo Finance API.
+- Store raw data in S3.
+- Send processing messages through SQS.
+- Save processed results in DynamoDB.
+- Display the result on the dashboard.
+- Record useful logs in CloudWatch for debugging.
+
+---
+
+## Actual Result
+
+The backend flow was triggered after submitting the stock analysis request.
+
+Based on the checking process, the request could go through the main backend components, including Lambda, S3, SQS, DynamoDB, and CloudWatch logs.
+
+However, there was an issue related to the AI analysis step using Amazon Bedrock. This issue is explained in the next section.
+
+---
+
+## QA Tester Notes
+
+From the QA testing perspective, this step helped confirm that the backend processing flow was mostly working as expected.
+
+CloudWatch logs were important because they helped identify where the system worked correctly and where an error occurred. In this case, the main issue was not from the basic stock data flow, but from the Bedrock quota limitation during the AI analysis step.
