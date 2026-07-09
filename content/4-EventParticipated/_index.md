@@ -3,42 +3,58 @@ title: "Events Participated"
 date: 2024-01-01
 weight: 4
 chapter: false
-pre: " <b> 4. </b> "
+pre: " <b>4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+# EVENTS PARTICIPATED
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+## 1. Overview
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+During this internship period, I did not participate in any formal AWS events, seminars, or official workshops.
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+Most of my learning activities were based on self-study, guided tutorials, YouTube videos, AWS Study Group materials, and group discussions related to the final project.
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
-
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
-
-&emsp;**Role:** Attendee  
+Therefore, this section honestly records that there were **no formal events attended** during the internship.
 
 ---
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+## 2. Event Participation Status
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+| Item | Description |
+|---|---|
+| Formal AWS Event | No formal AWS event attended |
+| Official Seminar | No official seminar attended |
+| Official Workshop | No official external workshop attended |
+| Main Learning Method | Self-study through tutorials, documents, and project practice |
+| Project-Related Activity | Group discussion and QA testing for AWS Stock Analyzer |
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+---
 
-&emsp;**Role:** Attendee  
+## 3. Self-Study and Related Activities
+
+Although I did not join formal events, I still continued learning AWS Cloud Computing through several self-study activities:
+
+- Watched AWS Cloud Computing tutorial videos.
+- Read AWS Study Group learning materials.
+- Reviewed basic AWS services such as IAM, EC2, S3, VPC, Security Groups, and CloudWatch.
+- Discussed the AWS Stock Analyzer project with team members.
+- Participated in manual testing tasks as the QA Tester of the final project.
+
+These activities helped me understand AWS concepts at a basic level and apply them to my role in the final project.
+
+---
+
+## 4. Reflection
+
+Since I did not attend official events, I understand that my practical exposure was still limited.
+
+However, through self-study and project participation, I was able to improve my basic understanding of AWS Cloud Computing and gain experience in manual testing for a cloud-based application project.
+
+In the future, I would like to participate in more official AWS workshops, webinars, or cloud computing events to improve my practical knowledge and learn from real industry use cases.
+
+---
+
+## 5. References
+
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
