@@ -6,34 +6,60 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# WORKLOG
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+## AWS Cloud Computing Internship Worklog
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+This section records my weekly learning process and project work during the AWS Cloud Computing internship.
 
-**Week 1:** [Getting familiar with AWS and basic AWS services](1.1-week1/)
+In the first weeks, I focused on learning basic AWS concepts through guided tutorials, YouTube videos, and AWS Study Group materials.  
+From Week 7, my team started the final project named **AWS Stock Analyzer**, and I took the role of **QA Tester**.
 
-**Week 2:** [Doing task A...](1.2-week2/)
+My worklog is written based on my actual learning process.  
+Some weeks focused more on watching tutorials and reading materials, while the later weeks focused on manual testing tasks for the final project.
 
-**Week 3:** [Doing task B...](1.3-week3/)
+---
 
-**Week 4:** [Doing task C...](1.4-week4/)
+## Student Information
 
-**Week 5:** [Doing task D...](1.5-week5/)
+| Item | Information |
+|---|---|
+| Full Name | Le Tuan Kiet |
+| Student ID | 2280601627 |
+| Major | Information Systems |
+| Internship Topic | AWS Cloud Computing |
+| Final Project | AWS Stock Analyzer |
+| Project Role | QA Tester |
+| Duration | 12 Weeks |
 
-**Week 6:** [Doing task E...](1.6-week6/)
+---
 
-**Week 7:** [Doing task G...](1.7-week7/)
+## Weekly Worklog List
 
-**Week 8:** [Doing task H...](1.8-week8/)
+| Week | Main Topic |
+|---|---|
+| Week 1 | Getting Familiar with Cloud Computing and AWS Basic Setup |
+| Week 2 | Practicing Basic AWS Services Through Guided Tutorials |
+| Week 3 | Learning AWS Networking and Security Concepts |
+| Week 4 | Studying AWS Compute, Storage, and Monitoring Services |
+| Week 5 | Reviewing AWS Application Architecture and Basic Deployment Concepts |
+| Week 6 | Reviewing AWS Fundamentals and Preparing Project Direction |
+| Week 7 | Starting the AWS Stock Analyzer Project as a QA Tester |
+| Week 8 | Preparing Test Cases for the AWS Stock Analyzer Project |
+| Week 9 | Testing Backend API Behavior for the AWS Stock Analyzer Project |
+| Week 10 | Testing Frontend Interface for the AWS Stock Analyzer Project |
+| Week 11 | Integration Testing for the AWS Stock Analyzer Project |
+| Week 12 | Completing Testing Tasks for the AWS Stock Analyzer Project |
 
-**Week 9:** [Doing task I...](1.9-week9/)
+---
 
-**Week 10:** [Doing task L...](1.10-week10/)
+## Summary
 
-**Week 11:** [Doing task M...](1.11-week11/)
+Through this worklog, I recorded my progress from basic AWS learning to final project testing.
 
-**Week 12:** [Doing task N...](1.12-week12/)
+In Weeks 1-2, I followed guided tutorials and practiced basic AWS tasks.  
+In Weeks 3-5, I mainly watched tutorials and read materials, so my understanding was mostly theoretical.  
+In Week 6, I reviewed AWS fundamentals and prepared for the project direction.  
+From Week 7 to Week 12, I participated in the **AWS Stock Analyzer** project as a QA Tester and focused on manual testing activities.
+
+The testing work included checking backend API behavior, frontend interface behavior, input validation, and frontend-backend integration.
