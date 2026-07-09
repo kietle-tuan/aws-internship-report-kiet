@@ -95,14 +95,18 @@ The project architecture may involve the following AWS services:
 
 | AWS Service | Purpose |
 |---|---|
-| Amazon S3 | Store static frontend files or raw data |
-| Amazon CloudFront | Distribute frontend content |
+| Amazon S3 | Store static frontend files and raw stock data |
+| Amazon CloudFront | Distribute frontend content to users |
+| AWS WAF | Help protect the frontend from common web attacks |
+| Amazon Cognito | Support user authentication and login |
 | Amazon API Gateway | Provide API endpoints for frontend-backend communication |
-| AWS Lambda | Process backend logic or stock-related requests |
-| Amazon DynamoDB | Store stock analysis data or application records |
-| Amazon Cognito | Support user authentication if login is included |
-| Amazon CloudWatch | Monitor logs, metrics, and system behavior |
-| Amazon SNS | Send alerts or notifications if required |
+| AWS Lambda | Handle ingestion, processing, and backend logic |
+| Amazon SQS | Support asynchronous message queue processing |
+| Amazon DynamoDB | Store processed stock analysis data |
+| AWS KMS | Support encryption and data protection |
+| Amazon Bedrock | Support AI-based stock analysis |
+| Amazon CloudWatch | Monitor logs, errors, and system behavior |
+| Yahoo Finance API | Provide stock market data source |
 
 The actual implementation depends on the final project scope and team setup.
 
