@@ -1,59 +1,74 @@
 ---
-title: "Internship Report"
+title: "Worklog"
 date: 2024-01-01
 weight: 1
 chapter: false
+pre: " <b>1. </b> "
 ---
 
-# INTERNSHIP REPORT
+# AWS INTERNSHIP WORKLOG
 
 ## Student Information
 
-- **Full Name:** Le Tuan Kiet  
-- **Student ID:** 2280601627  
-- **Major:** Information Systems  
-- **Internship Topic:** AWS Cloud Computing  
-- **Final Project:** AWS Stock Analyzer  
-- **Project Role:** QA Tester  
-- **Internship Duration:** 12 Weeks  
+| Information | Details |
+|---|---|
+| Full Name | Le Tuan Kiet |
+| Student ID | 2280601627 |
+| Major | Information Systems |
+| Internship Topic | AWS Cloud Computing |
+| Final Project | AWS Stock Analyzer |
+| Project Role | QA Tester |
 
 ---
 
-## Project Overview
+## Worklog Overview
 
-This website presents my internship report for the AWS Cloud Computing internship.
+This section records my weekly internship learning process and project work related to **AWS Cloud Computing**.
 
-During the internship, I learned basic AWS cloud concepts, reviewed several AWS services, and participated in the final project named **AWS Stock Analyzer**.
+In the first weeks, I focused on learning basic AWS concepts through guided tutorials, YouTube videos, and AWS Study Group materials. From **Week 7**, my team started the final project named **AWS Stock Analyzer**, and I took the role of **QA Tester**.
 
-In this project, my assigned role was **QA Tester**.  
-My main responsibility was to manually test the main functions of the system, including frontend behavior, backend API responses, input validation, and frontend-backend integration.
+My worklog is written based on my actual learning process. Some weeks focused more on watching tutorials and reading documents, while the later weeks focused on manual testing tasks for the final project.
 
 ---
 
-## Report Sections
+## Weekly Worklog List
 
-This internship report includes the following sections:
+| Week | Main Topic |
+|---|---|
+| Week 1 | Getting Familiar with Cloud Computing and AWS Basic Setup |
+| Week 2 | Practicing Basic AWS Services Through Guided Tutorials |
+| Week 3 | Learning AWS Compute and Storage Services |
+| Week 4 | Studying AWS Compute, Storage, and Monitoring Services |
+| Week 5 | Reviewing AWS Application Architecture and Basic Deployment Concepts |
+| Week 6 | Reviewing AWS Fundamentals and Preparing Project Direction |
+| Week 7 | Starting the AWS Stock Analyzer Project as a QA Tester |
+| Week 8 | Preparing Test Cases for the AWS Stock Analyzer Project |
+| Week 9 | Testing Backend API Behavior for the AWS Stock Analyzer Project |
+| Week 10 | Testing Frontend Interface for the AWS Stock Analyzer Project |
+| Week 11 | Integration Testing for the AWS Stock Analyzer Project |
+| Week 12 | Completing Testing Tasks for the AWS Stock Analyzer Project |
 
-1. Worklog  
-2. Proposal  
-3. Posted Blogs  
-4. Events Participated  
-5. Workshop  
-6. Self-Assessment  
-7. Sharing and Feedback  
+---
+
+## Learning Process Summary
+
+During the internship period, I learned the basic concepts of AWS Cloud Computing and gradually understood how cloud services can support an application.
+
+In the early weeks, I mainly studied basic AWS services such as IAM, EC2, S3, VPC, Security Groups, and CloudWatch. My learning was based on guided tutorials, YouTube videos, and AWS Study Group documents.
+
+From Week 7, I joined the final project **AWS Stock Analyzer** as a **QA Tester**. My work focused on manual testing, including:
+
+- Checking backend API behavior
+- Testing frontend interface
+- Testing input validation
+- Checking frontend-backend integration
+- Recording testing results and feedback
+
+Although my experience was still at a beginner level, this worklog helped me record my learning process, project participation, and testing responsibilities clearly.
 
 ---
 
 ## Reference Sources
 
-- YouTube AWS learning playlist: https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x
-- AWS Study Group: https://000001.awsstudygroup.com/vi/
-
----
-
-## Conclusion
-
-Through this internship, I gained a basic understanding of AWS Cloud Computing and learned how different AWS services can support a cloud-based application.
-
-Although my experience is still at a beginner level, I completed my assigned QA testing responsibilities in the AWS Stock Analyzer project.  
-This internship helped me improve my knowledge of AWS, manual testing, project documentation, and teamwork in a software project.
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
