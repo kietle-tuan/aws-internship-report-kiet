@@ -1,57 +1,58 @@
 ---
-title: "Week 6 Worklog"
+title: "Week 6"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
-pre: " <b> 1.6. </b> "
+pre: " <b>1.6 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 6 WORKLOG
 
-### Week 6 Objectives:
+## REVIEWING AWS FUNDAMENTALS AND PREPARING PROJECT DIRECTION
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to review the AWS knowledge learned in previous weeks and prepare for choosing a suitable final project direction.
 
-### Week 6 Achievements:
+During this week, I focused on reviewing basic AWS services, understanding the general structure of a cloud-based application, and discussing possible project ideas with the group.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+The purpose was to prepare for the project stage instead of implementing a complete system immediately.
 
-* Successfully created and configured an AWS Free Tier account.
+---
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### 2. Tasks to Implement in the Week
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 6 - Day 1 | Reviewed AWS basic services | Reviewed IAM, EC2, S3, VPC, Security Groups, and CloudWatch from previous learning materials. | Recalled the basic purpose of each AWS service and how they can support a cloud application. | AWS Study Group, YouTube playlist |
+| Week 6 - Day 2 | Reviewed cloud application structure | Studied how frontend, backend, database, and cloud infrastructure are usually connected in a simple project. | Understood the general components needed for a cloud-based application. | YouTube tutorials, AWS Study Group |
+| Week 6 - Day 3 | Prepared project ideas | Discussed possible project directions with the group and considered what type of application could be suitable for AWS practice. | Started identifying possible topics for the final project based on the team’s ability and available time. | Group discussion, online materials |
+| Week 6 - Day 4 | Reviewed testing role in a project | Learned about the basic responsibility of a tester in checking application functions, user interface, and API behavior. | Understood that testing is important for finding errors and confirming whether the system works as expected. | YouTube tutorials, online QA materials |
+| Week 6 - Day 5 | Prepared for project implementation stage | Organized learning notes and reviewed important AWS concepts before moving to the project phase. | Became more prepared to participate in the final project and take a suitable role in the team. | AWS Study Group, YouTube playlist |
 
-* Used AWS CLI to perform basic operations such as:
+---
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### 3. Results Achieved
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+By the end of Week 6, I had reviewed the basic AWS knowledge learned from previous weeks and prepared for the project stage.
+
+I understood the general structure of a cloud-based application and the relationship between frontend, backend, database, and AWS services.
+
+This week was mainly used for review, preparation, and project direction discussion, not for advanced implementation. After this week, I was more ready to join the final project and take responsibility for testing-related tasks.
+
+---
+
+### 4. Difficulties
+
+During this week, I still needed more time to understand how a complete cloud-based application is organized. Although I had learned about several AWS services, connecting them into a real project structure was still new to me.
+
+Because of that, I focused on reviewing the basic concepts carefully and preparing for a suitable role in the final project.
+
+---
+
+### 5. References
+
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
