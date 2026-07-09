@@ -1,57 +1,52 @@
 ---
-title: "Week 3 Worklog"
+title: "Week 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: " <b>1.3 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 3 WORKLOG
 
-### Week 3 Objectives:
+## LEARNING AWS COMPUTE AND STORAGE SERVICES
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of Week 3 was to continue learning about important AWS services, especially services related to computing and storage. During this week, I mainly watched tutorial videos, read AWS Study Group materials, and reviewed basic examples of how AWS services are used in cloud applications.
 
-### Week 3 Achievements:
+At this stage, I focused more on understanding concepts rather than building a complete system. The main purpose was to strengthen my background knowledge before working on the final project.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### 2. Tasks to Implement in the Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 3 - Day 1 | Reviewed Amazon EC2 | Studied the basic purpose of Amazon EC2, including virtual servers, instance types, AMI, key pairs, and security groups. | Understood how EC2 can be used to run applications or backend services in AWS. | YouTube tutorials, AWS Study Group |
+| Week 3 - Day 2 | Learned about EC2 security groups | Reviewed how inbound and outbound rules control network access to EC2 instances. | Understood the basic role of security groups in protecting cloud resources. | AWS Study Group |
+| Week 3 - Day 3 | Reviewed Amazon S3 | Learned about S3 buckets, objects, storage use cases, and simple static file storage. | Understood how S3 is used to store files and support cloud applications. | YouTube tutorials, AWS Study Group |
+| Week 3 - Day 4 | Learned basic storage and access permission concepts | Reviewed public/private access, bucket permission, and the importance of controlling access to stored files. | Became more aware of security issues when using cloud storage. | AWS Study Group |
+| Week 3 - Day 5 | Summarized learning notes | Took notes from tutorials and reviewed how EC2 and S3 may be used together in a simple cloud architecture. | Improved basic understanding of compute and storage services in AWS. | YouTube playlist, AWS Study Group |
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### 3. Results Achieved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+By the end of Week 3, I had a clearer understanding of Amazon EC2 and Amazon S3 at a basic level. I learned how EC2 can provide virtual computing resources and how S3 can be used for file and object storage.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Most of the work this week was based on watching tutorials and reading documentation. I did not deploy a full system during this week, but I improved my ability to understand AWS service roles and how they can support a cloud-based application.
+
+---
+
+### 4. Difficulties
+
+Some AWS concepts were still difficult to understand deeply, especially security group rules, access permissions, and how services communicate with each other in a real system. I needed to review tutorial examples multiple times to understand the basic workflow.
+
+---
+
+### 5. References
+
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
