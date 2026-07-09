@@ -1,32 +1,60 @@
 ---
-title : "Clean up"
-date : 2024-01-01
-weight : 6
-chapter : false
-pre : " <b> 5.6. </b> "
+title: "Testing Summary and Cleanup Notes"
+date: 2024-01-01
+weight: 6
+chapter: false
+pre: " <b>5.6 </b> "
 ---
-Congratulations on completing this workshop! 
-In this workshop, you learned architecture patterns for accessing Amazon S3 without using the Public Internet. 
-+ By creating a gateway endpoint, you enabled direct communication between EC2 resources and Amazon S3, without traversing an Internet Gateway. 
-+ By creating an interface endpoint you extended S3 connectivity to resources running in your on-premises data center via AWS Site-to-Site VPN or Direct Connect. 
 
-#### clean up
-1. Navigate to Hosted Zones on the left side of Route 53 console. Click the name of *s3.us-east-1.amazonaws.com* zone. Click Delete and confirm deletion by typing delete. 
+# 5.6 Testing Summary and Cleanup Notes
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+## Overview
 
-2. Disassociate the Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+This section summarizes the testing process and cleanup notes for the **AWS Stock Analyzer** workshop.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+Because my role in the project was **QA Tester**, this section does not describe that I deployed or removed the full AWS infrastructure by myself. Instead, it focuses on what was tested, what was observed, and what should be checked after testing.
 
-4. Open the CloudFormation console  and delete the two CloudFormation Stacks that you created for this lab:
-+ PLOnpremSetup
-+ PLCloudSetup
+---
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+## Testing Summary
 
-5. Delete S3 buckets
-+ Open S3 console
-+ Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.
+During the workshop testing process, I checked the main user flow and backend processing flow of the AWS Stock Analyzer project.
 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+The main testing activities included:
+
+- Logging in to the system using Amazon Cognito.
+- Checking the dashboard after successful login.
+- Observing the initial stock information displayed on the dashboard.
+- Selecting another stock symbol for analysis.
+- Submitting a stock analysis request.
+- Checking whether the backend flow was triggered.
+- Reviewing CloudWatch logs to identify system behavior and errors.
+- Recording the Bedrock quota issue found during testing.
+
+---
+
+## Main Flow Tested
+
+The main flow tested in this workshop was:
+
+**Login → Dashboard → Stock Analysis Request → Backend Processing → Result Display**
+
+The backend architecture included several AWS services:
+
+- Amazon S3 for storing raw stock data.
+- Amazon SQS for message queue processing.
+- AWS Lambda for ingestion and processing.
+- Amazon DynamoDB for storing processed results.
+- Amazon CloudWatch for logs and monitoring.
+- Amazon Bedrock for AI-based analysis.
+
+---
+
+## Issue Found During Testing
+
+During testing, the main issue found was related to **Amazon Bedrock quota**.
+
+The system returned the following error:
+
+```text
+Too many tokens per day, please trying again.
