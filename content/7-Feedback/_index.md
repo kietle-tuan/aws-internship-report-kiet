@@ -3,45 +3,131 @@ title: "Sharing and Feedback"
 date: 2024-01-01
 weight: 7
 chapter: false
-pre: " <b> 7. </b> "
+pre: " <b>7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# SHARING AND FEEDBACK
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+## 1. Overview
 
-### Overall Evaluation
+This section presents my sharing and feedback after completing the AWS Cloud Computing internship period.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+During the internship, I learned basic AWS concepts, reviewed cloud computing materials, and participated in the final project **AWS Stock Analyzer** as a **QA Tester**.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
-
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
-
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
-
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
-
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+Although my experience was still at a beginner level, the internship helped me understand more about AWS services, web application structure, and the role of testing in a software project.
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+## 2. Learning Experience
+
+At the beginning, AWS Cloud Computing was still new to me. I needed time to understand basic concepts such as cloud services, virtual servers, storage, networking, permissions, and monitoring.
+
+During the first weeks, I mainly learned through:
+
+- AWS Study Group materials
+- YouTube tutorials
+- Guided practice
+- Project discussion with team members
+- Reviewing basic AWS services
+
+From Week 7, my team selected **AWS Stock Analyzer** as the final project. My role was **QA Tester**, so I focused more on checking the application, testing basic functions, and recording issues.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+## 3. Project Experience
+
+The final project helped me understand how a simple web application can be organized.
+
+Through the **AWS Stock Analyzer** project, I learned that an application usually includes:
+
+| Component | Description |
+|---|---|
+| Frontend | The interface that users interact with |
+| Backend | The part that processes requests and returns responses |
+| Data/API | The source of information used by the application |
+| Cloud Services | Services that support hosting, storage, processing, or monitoring |
+| Testing | The process of checking whether the application works correctly |
+
+My main contribution was related to testing, including frontend checking, backend response checking, input validation, and integration testing.
+
+---
+
+## 4. Feedback About the Internship
+
+This internship gave me a useful opportunity to learn AWS Cloud Computing at a basic level.
+
+The learning materials and tutorials helped me understand common AWS services such as IAM, EC2, S3, VPC, Security Groups, and CloudWatch.
+
+However, AWS is a broad topic, so I think it would be helpful if there were more step-by-step practical exercises or sample projects for beginners. This would make it easier to understand how AWS services are connected in a real system.
+
+---
+
+## 5. Feedback About the Project
+
+The **AWS Stock Analyzer** project was suitable for practicing basic cloud application concepts.
+
+The project allowed the team to understand the connection between frontend, backend, and cloud services. It also gave me a chance to practice the QA Tester role.
+
+From my perspective, the project could be improved by:
+
+- Making the user interface clearer.
+- Improving error messages for invalid input.
+- Adding more detailed testing notes.
+- Improving backend response consistency.
+- Adding more documentation about how to run and test the project.
+
+These improvements would make the project easier to review, test, and maintain.
+
+---
+
+## 6. Personal Reflection
+
+Through this internship, I realized that I still need to practice more to understand AWS deeply.
+
+From Week 1 to Week 6, I focused mainly on learning AWS basics. From Week 7 to Week 12, I participated in the final project as a QA Tester.
+
+This process helped me understand that testing is an important part of software development. Even basic manual testing can help find problems and improve the application.
+
+I also learned that I should record testing results carefully so that the team can understand what was tested and what needs to be improved.
+
+---
+
+## 7. Skills Improved
+
+During the internship, I improved several skills:
+
+| Skill | Improvement |
+|---|---|
+| AWS Basic Knowledge | Learned basic cloud services and their purposes |
+| Project Understanding | Understood how frontend, backend, and cloud services work together |
+| Manual Testing | Practiced checking input, interface, backend response, and integration |
+| Documentation | Practiced writing weekly worklogs and project notes |
+| Teamwork | Discussed project issues and shared feedback with team members |
+| Self-Learning | Used tutorials and documents to review AWS concepts |
+
+---
+
+## 8. Suggestions for Future Learning
+
+After this internship, I think I should continue improving in the following areas:
+
+- Practice more AWS hands-on labs.
+- Learn more about backend API testing.
+- Study basic automation testing tools.
+- Learn how to write better test cases.
+- Understand how AWS services are deployed in real projects.
+- Improve project documentation skills.
+
+These improvements will help me become more confident in future software testing and cloud computing projects.
+
+---
+
+## 9. Conclusion
+
+Overall, the internship was a valuable learning experience for me.
+
+I gained basic knowledge of AWS Cloud Computing and understood more about how a cloud-based application can be structured.
+
+In the final project **AWS Stock Analyzer**, I contributed as a **QA Tester** by checking application behavior, testing basic functions, and recording observations.
+
+Although I still need more practice, this internship helped me build a clearer direction for improving my AWS and QA testing skills in the future.
