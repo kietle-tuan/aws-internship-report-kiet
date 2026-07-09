@@ -1,99 +1,113 @@
 ---
-title : "VPC Endpoint Policies"
-date : 2024-01-01
-weight : 5
-chapter : false
-pre : " <b> 5.5. </b> "
+title: "Security and Access Control"
+date: 2024-01-01
+weight: 5
+chapter: false
+pre: " <b>5.5 </b> "
 ---
 
-When you create an interface or gateway endpoint, you can attach an endpoint policy to it that controls access to the service to which you are connecting. A VPC endpoint policy is an IAM resource policy that you attach to an endpoint. If you do not attach a policy when you create an endpoint, AWS attaches a default policy for you that allows full access to the service through the endpoint.
+# 5.5 Security and Access Control
 
-You can create a policy that restricts access to specific S3 buckets only. This is useful if you only want certain S3 Buckets to be accessible through the endpoint.
+## Overview
 
-In this section you will create a VPC endpoint policy that restricts access to the S3 bucket specified in the VPC endpoint policy.
+In the **AWS Stock Analyzer** project, security and access control were important because the system included user login, API requests, stock data processing, database storage, and AI analysis.
 
-![endpoint diagram](/images/5-Workshop/5.5-Policy/s3-bucket-policy.png)
+This section explains the security-related services used in the architecture and the points that should be checked from a QA Tester perspective.
 
-#### Connect to an EC2 instance and verify connectivity to S3
+---
 
-1. Start a new AWS Session Manager session on the instance named Test-Gateway-Endpoint. From the session, verify that you can list the contents of the bucket you created in Part 1: Access S3 from VPC:
+## Main Security Components
 
-```
-aws s3 ls s3://\<your-bucket-name\>
-```
-![test](/images/5-Workshop/5.5-Policy/test1.png)
+The project used several AWS services to support security and access control:
 
-The bucket contents include the two 1 GB files uploaded in earlier.
+- **Amazon Cognito** for user authentication.
+- **API Gateway** to manage API access from the frontend.
+- **AWS WAF** to protect the frontend from common web attacks.
+- **Amazon CloudFront** to deliver the frontend securely.
+- **AWS KMS** to support data encryption.
+- **IAM Roles and Policies** to control service permissions.
+- **CloudWatch Logs** to support monitoring and troubleshooting.
 
-2. Create a new S3 bucket; follow the naming pattern you used in Part 1, but add a '-2' to the name. Leave other fields as default and click create
+---
 
-![create bucket](/images/5-Workshop/5.5-Policy/create-bucket.png)
+## Cognito Authentication
 
-Successfully create bucket
+Amazon Cognito was used to manage user login.
 
-![Success](/images/5-Workshop/5.5-Policy/create-bucket-success.png)
+During testing, I checked whether the login page worked correctly and whether the user could access the dashboard after successful authentication.
 
-3. Navigate to: Services > VPC > Endpoints, then select the Gateway VPC endpoint you created earlier. Click the Policy tab. Click Edit policy.
+The expected behavior was:
 
-![policy](/images/5-Workshop/5.5-Policy/policy1.png)
+- Users must log in before accessing the dashboard.
+- Invalid login information should not allow access.
+- After login, the user should be redirected to the dashboard.
 
-The default policy allows access to all S3 Buckets through the VPC endpoint.
+---
 
-4. In Edit Policy console, copy & Paste the following policy, then replace yourbucketname-2 with your 2nd bucket name. This policy will allow access through the VPC endpoint to your new bucket, but not any other bucket in Amazon S3. Click Save to apply the policy.
+## API Gateway Access Control
 
-```
-{
-  "Id": "Policy1631305502445",
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1631305501021",
-      "Action": "s3:*",
-      "Effect": "Allow",
-      "Resource": [
-      				"arn:aws:s3:::yourbucketname-2",
-       				"arn:aws:s3:::yourbucketname-2/*"
-       ],
-      "Principal": "*"
-    }
-  ]
-}
-```
+API Gateway was used as the entry point between the frontend and backend services.
 
-![custom policy](/images/5-Workshop/5.5-Policy/policy2.png)
+From the testing perspective, the API should only accept valid requests from the application. The request should then be sent to the backend Lambda functions for processing.
 
-Successfully customize policy
+The main checking points were:
 
-![success](/static/images/5-Workshop/5.5-Policy/success.png)
+- Whether the frontend could send a request to the API.
+- Whether the API could trigger the correct backend function.
+- Whether failed requests could be identified through logs.
 
-5. From your session on the Test-Gateway-Endpoint instance, test access to the S3 bucket you created in Part 1: Access S3 from VPC
-```
-aws s3 ls s3://<yourbucketname>
-```
+---
 
-This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy:
+## IAM Roles and Permissions
 
-![error](/static/images/5-Workshop/5.5-Policy/error.png)
+IAM roles and policies were used to control what each AWS service could access.
 
-6. Return to your home directory on your EC2 instance ` cd~ `
+For example:
 
-+ Create a file ```fallocate -l 1G test-bucket2.xyz ```
-+ Copy file to 2nd bucket ```aws s3 cp test-bucket2.xyz s3://<your-2nd-bucket-name>```
+- Lambda Ingestion needed permission to write raw data to S3.
+- Lambda Processing needed permission to read messages from SQS.
+- Lambda Processing needed permission to write processed data to DynamoDB.
+- CloudWatch permission was needed for logging.
 
-![success](/static/images/5-Workshop/5.5-Policy/test2.png)
+Using IAM roles helps avoid giving unnecessary permissions to services.
 
-This operation succeeds because it is permitted by the VPC endpoint policy.
+---
 
-![success](/static/images/5-Workshop/5.5-Policy/test2-success.png)
+## Data Protection
 
-+ Then we test access to the first bucket by copy the file to 1st bucket `aws s3 cp test-bucket2.xyz s3://<your-1st-bucket-name>`
+The project architecture included data storage in Amazon S3 and DynamoDB.
 
-![fail](/static/images/5-Workshop/5.5-Policy/test2-fail.png)
+AWS KMS was included to support encryption and protect stored data.
 
-This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy.
+The expected security design was:
 
-#### Part 3 Summary:
+- Raw stock data should be stored securely in S3.
+- Processed results should be stored securely in DynamoDB.
+- Sensitive access should be controlled by IAM policies.
+- Logs should be available in CloudWatch for checking and debugging.
 
-In this section, you created a VPC endpoint policy for Amazon S3, and used the AWS CLI to test the policy. AWS CLI actions targeted to your original S3 bucket failed because you applied a policy that only allowed access to the second bucket you created. AWS CLI actions targeted for your second bucket succeeded because the policy allowed them. These policies can be useful in situations where you need to control access to resources through VPC endpoints.
+---
 
+## WAF and CloudFront Protection
 
+The frontend was hosted using S3 Static Website Hosting and delivered through CloudFront.
+
+AWS WAF was included to help protect the web application from common web attacks and unwanted traffic.
+
+This improves the security of the public-facing frontend.
+
+---
+
+## QA Tester Notes
+
+From the QA Tester perspective, I did not create all security policies myself. My focus was to understand and verify the security design of the system.
+
+The main points I checked were:
+
+- Users needed to log in before accessing the dashboard.
+- The dashboard could send requests after login.
+- Backend services used separated AWS components.
+- Logs could be checked through CloudWatch.
+- The architecture included security services such as Cognito, WAF, IAM, and KMS.
+
+This helped confirm that the project considered basic security and access control requirements.
