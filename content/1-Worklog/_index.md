@@ -1,65 +1,61 @@
 ---
-title: "Worklog"
+title: "Week 9"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
-pre: " <b> 1. </b> "
+pre: " <b>1.9 </b> "
 ---
 
-# WORKLOG
+# WEEK 9 WORKLOG
 
-## AWS Cloud Computing Internship Worklog
-
-This section records my weekly learning process and project work during the AWS Cloud Computing internship.
-
-In the first weeks, I focused on learning basic AWS concepts through guided tutorials, YouTube videos, and AWS Study Group materials.  
-From Week 7, my team started the final project named **AWS Stock Analyzer**, and I took the role of **QA Tester**.
-
-My worklog is written based on my actual learning process.  
-Some weeks focused more on watching tutorials and reading materials, while the later weeks focused on manual testing tasks for the final project.
+## TESTING BACKEND API BEHAVIOR FOR THE AWS STOCK ANALYZER PROJECT
 
 ---
 
-## Student Information
+### 1. Weekly Goals
 
-| Item | Information |
-|---|---|
-| Full Name | Le Tuan Kiet |
-| Student ID | 2280601627 |
-| Major | Information Systems |
-| Internship Topic | AWS Cloud Computing |
-| Final Project | AWS Stock Analyzer |
-| Project Role | QA Tester |
-| Duration | 12 Weeks |
+The goal of this week was to start checking the backend behavior of the **AWS Stock Analyzer** project.
+
+As the **QA Tester**, I focused on testing basic API responses, checking whether the backend could receive requests correctly, and observing simple error cases.
+
+The testing was done at a basic level to support the team in identifying issues during project development.
 
 ---
 
-## Weekly Worklog List
+### 2. Tasks to Implement in the Week
 
-| Week | Main Topic |
-|---|---|
-| Week 1 | Getting Familiar with Cloud Computing and AWS Basic Setup |
-| Week 2 | Practicing Basic AWS Services Through Guided Tutorials |
-| Week 3 | Learning AWS Networking and Security Concepts |
-| Week 4 | Studying AWS Compute, Storage, and Monitoring Services |
-| Week 5 | Reviewing AWS Application Architecture and Basic Deployment Concepts |
-| Week 6 | Reviewing AWS Fundamentals and Preparing Project Direction |
-| Week 7 | Starting the AWS Stock Analyzer Project as a QA Tester |
-| Week 8 | Preparing Test Cases for the AWS Stock Analyzer Project |
-| Week 9 | Testing Backend API Behavior for the AWS Stock Analyzer Project |
-| Week 10 | Testing Frontend Interface for the AWS Stock Analyzer Project |
-| Week 11 | Integration Testing for the AWS Stock Analyzer Project |
-| Week 12 | Completing Testing Tasks for the AWS Stock Analyzer Project |
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 9 - Day 1 | Reviewed backend testing scope | Discussed with the team about which backend functions needed to be checked first. | Understood the main backend areas that should be tested in the AWS Stock Analyzer project. | Group discussion, project notes |
+| Week 9 - Day 2 | Checked basic API requests | Tested simple API requests related to stock data input and response behavior. | Confirmed that backend testing should focus on request handling, response format, and error messages. | Project source code, online QA materials |
+| Week 9 - Day 3 | Tested valid input cases | Used valid stock symbol inputs to check whether the backend returned expected responses. | Observed the basic behavior of the backend when receiving correct input. | Project testing notes |
+| Week 9 - Day 4 | Tested invalid input cases | Tried simple invalid cases such as empty input or incorrect stock symbols. | Identified how the backend handled incorrect input and noted areas that may need improvement. | Project testing notes |
+| Week 9 - Day 5 | Recorded backend testing results | Wrote down testing observations and shared basic feedback with the team. | Created simple backend testing notes to support later fixes and frontend-backend checking. | Group discussion, project notes |
 
 ---
 
-## Summary
+### 3. Results Achieved
 
-Through this worklog, I recorded my progress from basic AWS learning to final project testing.
+By the end of Week 9, I had started testing the backend behavior of the **AWS Stock Analyzer** project.
 
-In Weeks 1-2, I followed guided tutorials and practiced basic AWS tasks.  
-In Weeks 3-5, I mainly watched tutorials and read materials, so my understanding was mostly theoretical.  
-In Week 6, I reviewed AWS fundamentals and prepared for the project direction.  
-From Week 7 to Week 12, I participated in the **AWS Stock Analyzer** project as a QA Tester and focused on manual testing activities.
+I checked basic API request and response behavior using simple valid and invalid input cases.
 
-The testing work included checking backend API behavior, frontend interface behavior, input validation, and frontend-backend integration.
+The testing was not advanced or automated, but it helped me understand how the backend handled user requests and possible errors.
+
+This week helped prepare for more complete testing when the frontend and backend were connected.
+
+---
+
+### 4. Difficulties
+
+During backend testing, I still needed time to understand how API requests and responses worked in the project.
+
+Some error cases were not easy to identify at first, so I had to test slowly and record the results clearly.
+
+---
+
+### 5. References
+
+- Group discussion and project notes
+- Project source code
+- Online QA testing materials
