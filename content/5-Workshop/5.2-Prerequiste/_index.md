@@ -1,242 +1,203 @@
 ---
-title : "Prerequiste"
-date : 2024-01-01 
-weight : 2 
-chapter : false
-pre : " <b> 5.2. </b> "
+title: "Prerequisite"
+date: 2024-01-01
+weight: 2
+chapter: false
+pre: " <b>5.2 </b> "
 ---
 
-#### IAM permissions
-Add the following IAM permission policy to your user account to deploy and cleanup this workshop.
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:*",
-                "cloudwatch:*",
-                "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
-                "ec2:AllocateAddress",
-                "ec2:AssociateAddress",
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:AssociateRouteTable",
-                "ec2:AssociateSubnetCidrBlock",
-                "ec2:AssociateTransitGatewayRouteTable",
-                "ec2:AssociateVpcCidrBlock",
-                "ec2:AttachInternetGateway",
-                "ec2:AttachNetworkInterface",
-                "ec2:AttachVolume",
-                "ec2:AttachVpnGateway",
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateClientVpnEndpoint",
-                "ec2:CreateClientVpnRoute",
-                "ec2:CreateCustomerGateway",
-                "ec2:CreateDhcpOptions",
-                "ec2:CreateFlowLogs",
-                "ec2:CreateInternetGateway",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateNetworkAcl",
-                "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
-                "ec2:CreateRoute",
-                "ec2:CreateRouteTable",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateSubnet",
-                "ec2:CreateSubnetCidrReservation",
-                "ec2:CreateTags",
-                "ec2:CreateTransitGateway",
-                "ec2:CreateTransitGatewayPeeringAttachment",
-                "ec2:CreateTransitGatewayPrefixListReference",
-                "ec2:CreateTransitGatewayRoute",
-                "ec2:CreateTransitGatewayRouteTable",
-                "ec2:CreateTransitGatewayVpcAttachment",
-                "ec2:CreateVpc",
-                "ec2:CreateVpcEndpoint",
-                "ec2:CreateVpcEndpointConnectionNotification",
-                "ec2:CreateVpcEndpointServiceConfiguration",
-                "ec2:CreateVpnConnection",
-                "ec2:CreateVpnConnectionRoute",
-                "ec2:CreateVpnGateway",
-                "ec2:DeleteCustomerGateway",
-                "ec2:DeleteFlowLogs",
-                "ec2:DeleteInternetGateway",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DeleteNetworkInterfacePermission",
-                "ec2:DeleteRoute",
-                "ec2:DeleteRouteTable",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteSubnet",
-                "ec2:DeleteSubnetCidrReservation",
-                "ec2:DeleteTags",
-                "ec2:DeleteTransitGateway",
-                "ec2:DeleteTransitGatewayPeeringAttachment",
-                "ec2:DeleteTransitGatewayPrefixListReference",
-                "ec2:DeleteTransitGatewayRoute",
-                "ec2:DeleteTransitGatewayRouteTable",
-                "ec2:DeleteTransitGatewayVpcAttachment",
-                "ec2:DeleteVpc",
-                "ec2:DeleteVpcEndpoints",
-                "ec2:DeleteVpcEndpointServiceConfigurations",
-                "ec2:DeleteVpnConnection",
-                "ec2:DeleteVpnConnectionRoute",
-                "ec2:Describe*",
-                "ec2:DetachInternetGateway",
-                "ec2:DisassociateAddress",
-                "ec2:DisassociateRouteTable",
-                "ec2:GetLaunchTemplateData",
-                "ec2:GetTransitGatewayAttachmentPropagations",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifySecurityGroupRules",
-                "ec2:ModifyTransitGatewayVpcAttachment",
-                "ec2:ModifyVpcAttribute",
-                "ec2:ModifyVpcEndpoint",
-                "ec2:ReleaseAddress",
-                "ec2:ReplaceRoute",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RunInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances",
-                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
-                "iam:AddRoleToInstanceProfile",
-                "iam:AttachRolePolicy",
-                "iam:CreateInstanceProfile",
-                "iam:CreatePolicy",
-                "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeletePolicy",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListPolicyVersions",
-                "iam:ListRoles",
-                "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile",
-                "lambda:CreateFunction",
-                "lambda:DeleteFunction",
-                "lambda:DeleteLayerVersion",
-                "lambda:GetFunction",
-                "lambda:GetLayerVersion",
-                "lambda:InvokeFunction",
-                "lambda:PublishLayerVersion",
-                "logs:CreateLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:DescribeLogGroups",
-                "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
-                "s3:AbortMultipartUpload",
-                "s3:CreateBucket",
-                "s3:DeleteBucket",
-                "s3:DeleteObject",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:GetBucketAcl",
-                "s3:GetBucketOwnershipControls",
-                "s3:GetBucketPolicy",
-                "s3:GetBucketPolicyStatus",
-                "s3:GetBucketPublicAccessBlock",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:GetBucketVersioning",
-                "s3:ListAccessPoints",
-                "s3:ListAccessPointsForObjectLambda",
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:ListBucketVersions",
-                "s3:ListJobs",
-                "s3:ListMultipartUploadParts",
-                "s3:ListMultiRegionAccessPoints",
-                "s3:ListStorageLensConfigurations",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:PutBucketAcl",
-                "s3:PutBucketPolicy",
-                "s3:PutBucketPublicAccessBlock",
-                "s3:PutObject",
-                "secretsmanager:CreateSecret",
-                "secretsmanager:DeleteSecret",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:ListSecrets",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:PutResourcePolicy",
-                "secretsmanager:TagResource",
-                "secretsmanager:UpdateSecret",
-                "sns:ListTopics",
-                "ssm:DescribeInstanceProperties",
-                "ssm:DescribeSessions",
-                "ssm:GetConnectionStatus",
-                "ssm:GetParameters",
-                "ssm:ListAssociations",
-                "ssm:ResumeSession",
-                "ssm:StartSession",
-                "ssm:TerminateSession"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
+# 5.2 PREREQUISITE
 
-```
+## Deployment Preparation
 
-#### Provision resources using CloudFormation
+---
 
-In this lab, we will use **N.Virginia region (us-east-1)**.
+## 1. AWS Account
 
-To prepare the workshop environment, deploy this **CloudFormation Template** (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Accept all of the defaults when deploying the template. 
+An AWS account was required to access the AWS Management Console and create the cloud services used in the project.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+The project was deployed in the AWS Singapore region.
 
-+ Tick 2 acknowledgement boxes
-+ Choose **Create stack**
+![AWS Account](./1.PNG)
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
+---
 
-The **ClouddFormation** deployment requires about 15 minutes to complete.
+## 2. System Architecture Diagram
 
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
+Before deployment, the team prepared the system architecture diagram to understand how AWS services were connected.
 
-+ **2 VPCs** have been created
+The architecture showed the flow from user request, frontend, backend processing, data storage, AI analysis, and dashboard result display.
 
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+![System Architecture Diagram](./2.PNG)
 
-+ **3 EC2s** have been created
+---
 
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+## 3. Data Source: Yahoo Finance API
+
+Yahoo Finance was used as the main market data source of the system.
+
+The system used Yahoo Finance to collect stock data such as:
+
+- Open price
+- High price
+- Low price
+- Close price
+- Trading volume
+- Historical price data by timeframe
+
+This data was then processed by the backend for technical indicator calculation.
+
+---
+
+## 4. Backend Deployment Preparation
+
+The backend required several AWS services.
+
+### 4.1 Amazon S3 for Raw Data
+
+Amazon S3 was used to store raw stock data collected from Yahoo Finance.
+
+Bucket example: `production-stock-raw-data-finance`
+
+Raw data storage is useful because it allows the system to check the original input data and reprocess data when needed.
+
+---
+
+### 4.2 Amazon SQS
+
+Amazon SQS was used as a message queue between Ingestion Lambda and Processing Lambda.
+
+Queue examples:
+
+- `stock-processing-queue`
+- `stock-processing-dlq`
+
+SQS helps the system process data asynchronously. When Ingestion Lambda finishes collecting data, it sends a message to SQS. Processing Lambda then receives the message and continues the analysis process.
+
+---
+
+### 4.3 AWS Lambda
+
+Two main Lambda functions were prepared:
+
+- `production-stock-ingestion`
+- `production-stock-processing`
+
+The Lambda functions used Node.js 22.x.
+
+The **Ingestion Lambda** receives stock analysis requests, calls Yahoo Finance, normalizes stock data, stores raw data in S3, and sends a message to SQS.
+
+The **Processing Lambda** reads messages from SQS, retrieves stock data from S3, calculates technical indicators such as RSI, MACD, MA20, MA50, and Volume, then sends processed data to Amazon Bedrock for AI analysis.
+
+---
+
+## 5. Database Deployment Preparation
+
+### 5.1 AWS KMS
+
+AWS KMS was used to encrypt stored data.
+
+KMS helps protect analysis data at rest and improves the security of the system.
+
+---
+
+### 5.2 Amazon DynamoDB
+
+Amazon DynamoDB was used to store final stock analysis results.
+
+Example table: `Stock_reports_1`
+
+DynamoDB stores information such as:
+
+- Stock symbol
+- Timeframe
+- Technical indicators
+- AI recommendation
+- Confidence score
+- Analysis reason
+- Trader approval status
+
+The dashboard reads data from DynamoDB to display analysis results.
+
+---
+
+## 6. Frontend Deployment Preparation
+
+### 6.1 Amazon S3 for Frontend Hosting
+
+Amazon S3 was also used to host frontend static files.
+
+Example bucket: `stock-frontend-finance`
+
+The frontend files include HTML, CSS, JavaScript, and other static resources.
+
+This approach helps reduce cost because the system does not need to run a web server continuously.
+
+---
+
+### 6.2 Amazon CloudFront
+
+Amazon CloudFront was used as a CDN to distribute the frontend dashboard.
+
+CloudFront helps improve loading speed and supports HTTPS access.
+
+The deployed application link:
+
+https://d3k9qj467czrvg.cloudfront.net/
+
+---
+
+### 6.3 AWS WAF
+
+AWS WAF was used in front of CloudFront to protect the web application.
+
+WAF can help filter or block common web attacks such as:
+
+- SQL Injection
+- Cross-Site Scripting
+- Bot requests
+- Abnormal request patterns
+
+---
+
+## 7. Authentication and API
+
+### 7.1 Amazon Cognito
+
+Amazon Cognito was used for user authentication.
+
+Only valid users, such as traders or administrators, can log in to the dashboard and view analysis reports.
+
+---
+
+### 7.2 API Gateway
+
+Amazon API Gateway was used as the connection layer between frontend and backend.
+
+When users interact with the dashboard, the frontend sends requests to API Gateway. API Gateway then forwards the requests to the related Lambda functions.
+
+---
+
+## 8. Amazon Bedrock
+
+Amazon Bedrock was used to support AI-based stock analysis.
+
+In this project, Bedrock does not directly collect stock data or news. It receives calculated technical indicators such as RSI, MACD, MA, and stock price data, then generates analysis and recommendations.
+
+Examples of recommendation results include:
+
+- Strong Buy
+- Strong Sell
+- Watch
+
+Bedrock also supports confidence scores and analysis reasons.
+
+---
+
+## 9. Summary
+
+This prerequisite section helped prepare the AWS services needed for the AWS Stock Analyzer project.
+
+The prepared services included S3, SQS, Lambda, DynamoDB, KMS, CloudFront, WAF, Cognito, API Gateway, and Amazon Bedrock.
+
+These services supported the main project flow from data collection to backend processing, AI-supported analysis, dashboard display, and user authentication.
