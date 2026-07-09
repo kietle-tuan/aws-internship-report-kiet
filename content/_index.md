@@ -31,22 +31,23 @@ My worklog is written based on my actual learning process. Some weeks focused mo
 
 ---
 
+
 ## Weekly Worklog List
 
 | Week | Main Topic |
 |---|---|
-| Week 1 | Getting Familiar with Cloud Computing and AWS Basic Setup |
-| Week 2 | Practicing Basic AWS Services Through Guided Tutorials |
-| Week 3 | Learning AWS Compute and Storage Services |
-| Week 4 | Studying AWS Compute, Storage, and Monitoring Services |
-| Week 5 | Reviewing AWS Application Architecture and Basic Deployment Concepts |
-| Week 6 | Reviewing AWS Fundamentals and Preparing Project Direction |
-| Week 7 | Starting the AWS Stock Analyzer Project as a QA Tester |
-| Week 8 | Preparing Test Cases for the AWS Stock Analyzer Project |
-| Week 9 | Testing Backend API Behavior for the AWS Stock Analyzer Project |
-| Week 10 | Testing Frontend Interface for the AWS Stock Analyzer Project |
-| Week 11 | Integration Testing for the AWS Stock Analyzer Project |
-| Week 12 | Completing Testing Tasks for the AWS Stock Analyzer Project |
+| [Week 1](1.1-Week1/) | Getting Familiar with Cloud Computing and AWS Basic Setup |
+| [Week 2](1.2-Week2/) | Practicing Basic AWS Services Through Guided Tutorials |
+| [Week 3](1.3-Week3/) | Learning AWS Compute and Storage Services |
+| [Week 4](1.4-Week4/) | Studying AWS Compute, Storage, and Monitoring Services |
+| [Week 5](1.5-Week5/) | Reviewing AWS Application Architecture and Basic Deployment Concepts |
+| [Week 6](1.6-Week6/) | Reviewing AWS Fundamentals and Preparing Project Direction |
+| [Week 7](1.7-Week7/) | Starting the AWS Stock Analyzer Project as a QA Tester |
+| [Week 8](1.8-Week8/) | Preparing Test Cases for the AWS Stock Analyzer Project |
+| [Week 9](1.9-Week9/) | Testing Backend API Behavior for the AWS Stock Analyzer Project |
+| [Week 10](1.10-Week10/) | Testing Frontend Interface for the AWS Stock Analyzer Project |
+| [Week 11](1.11-Week11/) | Integration Testing for the AWS Stock Analyzer Project |
+| [Week 12](1.12-Week12/) | Completing Testing Tasks for the AWS Stock Analyzer Project |
 
 ---
 
