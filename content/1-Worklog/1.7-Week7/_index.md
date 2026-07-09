@@ -1,57 +1,58 @@
 ---
-title: "Week 7 Worklog"
+title: "Week 7"
 date: 2024-01-01
-weight: 1
+weight: 7
 chapter: false
-pre: " <b> 1.7. </b> "
+pre: " <b>1.7 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 7 WORKLOG
 
-### Week 7 Objectives:
+## STARTING THE AWS STOCK ANALYZER PROJECT AS A QA TESTER
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to start working on the final project named **AWS Stock Analyzer** and define my role in the team.
 
-### Week 7 Achievements:
+From this week, I took the role of **QA Tester**. My main responsibility was to understand the project idea, review the expected features, and prepare a basic testing direction for the application.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+At this stage, the project was still in the early phase, so my work focused mainly on understanding requirements and preparing for future testing activities.
 
-* Successfully created and configured an AWS Free Tier account.
+---
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### 2. Tasks to Implement in the Week
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 7 - Day 1 | Joined project topic discussion | Discussed with the team about choosing AWS Stock Analyzer as the final project topic. | Understood the general idea of the project and the main purpose of the application. | Group discussion |
+| Week 7 - Day 2 | Defined personal role | Took the role of QA Tester and discussed testing responsibilities with the team. | Identified that my tasks would focus on checking functions, UI behavior, and basic system errors. | Group discussion, online QA materials |
+| Week 7 - Day 3 | Reviewed project requirements | Read and discussed the expected features of the AWS Stock Analyzer project. | Understood the basic features that needed to be tested later. | Group discussion, project notes |
+| Week 7 - Day 4 | Prepared testing direction | Started thinking about test cases for user interface, input validation, and backend responses. | Created an initial testing mindset before the application was fully completed. | Online QA materials |
+| Week 7 - Day 5 | Reviewed related AWS concepts | Reviewed basic AWS services that may be related to the project, such as deployment, storage, and monitoring. | Connected previous AWS learning with the final project direction at a basic level. | AWS Study Group, YouTube playlist |
 
-* Used AWS CLI to perform basic operations such as:
+---
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### 3. Results Achieved
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+By the end of Week 7, the team had selected **AWS Stock Analyzer** as the final project topic. I understood the general purpose of the application and my role as a **QA Tester** in the project.
+
+I did not perform deep testing yet because the project was still in the early stage. However, I started preparing a basic testing direction, including checking user interface behavior, input validation, and backend responses.
+
+This week marked the transition from general AWS learning to working on the final project.
+
+---
+
+### 4. Difficulties
+
+At the beginning of the project, I still needed time to understand the project requirements and the expected features. Because my main role was testing, I had to wait for some functions to be completed before I could test them in detail.
+
+However, I used this time to understand the project idea and prepare for future testing tasks.
+
+---
+
+### 5. References
+
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
