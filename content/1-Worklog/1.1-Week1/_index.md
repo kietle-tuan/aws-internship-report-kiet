@@ -1,57 +1,41 @@
 ---
-title: "Week 1 Worklog"
+title: "Week 1"
 date: 2024-01-01
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.1 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 1 WORKLOG
 
-### Week 1 Objectives:
+## GETTING FAMILIAR WITH CLOUD COMPUTING AND AWS BASIC SETUP
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### 1. Weekly Goals
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+The goal of this week was to get familiar with cloud computing concepts and the AWS learning environment.  
+I started learning what cloud computing is, why AWS is used, and how common AWS services are organized in the AWS Management Console.
 
+During this week, I followed basic tutorials and learning materials to understand the general direction of the internship.  
+The focus was on building a simple foundation before moving to more AWS services in the following weeks.
 
-### Week 1 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### 2. Tasks to Implement in the Week
 
-* Successfully created and configured an AWS Free Tier account.
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 1 - Day 1 | Learned basic cloud computing concepts | Reviewed the meaning of cloud computing, cloud service models, and why companies use cloud platforms. | Understood the basic idea of cloud computing and its role in modern applications. | YouTube tutorials, AWS Study Group |
+| Week 1 - Day 2 | Got familiar with AWS | Learned about Amazon Web Services and reviewed the AWS Management Console interface. | Became more familiar with the AWS learning environment and common service categories. | AWS Study Group |
+| Week 1 - Day 3 | Learned IAM basics | Reviewed IAM users, groups, roles, and policies at a basic level. | Understood that IAM is used to manage access control and permissions in AWS. | AWS Study Group, YouTube tutorials |
+| Week 1 - Day 4 | Reviewed basic AWS security concepts | Learned why account security, permissions, and access management are important in AWS. | Understood the importance of securing AWS accounts and resources. | AWS Study Group |
+| Week 1 - Day 5 | Summarized Week 1 learning | Reviewed the concepts learned during the week and prepared notes for the next learning stage. | Completed the first week of basic AWS learning and prepared for more hands-on practice. | Personal notes, AWS Study Group |
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+---
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+### 3. Results Achieved
 
-* Used AWS CLI to perform basic operations such as:
+By the end of Week 1, I had a basic understanding of cloud computing and the AWS learning environment.  
+I became familiar with the AWS Management Console and learned the basic purpose of IAM in managing users, roles, and permissions.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+This week was mainly focused on learning basic concepts and following guided materials.  
+Although I did not build a complete system during this week, I prepared a foundation for later AWS practice and project work.
