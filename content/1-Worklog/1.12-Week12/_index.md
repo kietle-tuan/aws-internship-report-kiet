@@ -1,57 +1,65 @@
 ---
-title: "Week 12 Worklog"
+title: "Week 12"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
-pre: " <b> 1.12. </b> "
+pre: " <b>1.12 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 12 WORKLOG
 
-### Week 12 Objectives:
+## COMPLETING TESTING TASKS FOR THE AWS STOCK ANALYZER PROJECT
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to complete all planned testing tasks for the **AWS Stock Analyzer** project.
 
-### Week 12 Achievements:
+As the **QA Tester**, I focused on reviewing the tested features, rechecking the main user flows, recording final testing results, and preparing testing notes for the final report.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+The testing was performed manually and focused on basic functionality, frontend behavior, backend responses, input validation, and frontend-backend integration.
 
-* Successfully created and configured an AWS Free Tier account.
+---
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### 2. Tasks to Implement in the Week
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 12 - Day 1 | Reviewed previous testing results | Reviewed backend testing notes, frontend testing notes, and integration testing observations from previous weeks. | Identified the main tested areas and prepared a checklist for final testing review. | Project testing notes |
+| Week 12 - Day 2 | Completed functional testing | Rechecked the main functions of the AWS Stock Analyzer application, including stock symbol input, request submission, and result display. | Confirmed that the main application flow had been tested and recorded the final observations. | Project frontend interface, project testing notes |
+| Week 12 - Day 3 | Completed input validation testing | Tested valid stock symbol input, empty input, and invalid stock symbol cases again to observe how the system responded. | Completed basic input validation testing and noted whether the application handled common input cases properly. | Project testing notes |
+| Week 12 - Day 4 | Completed frontend and backend integration checking | Checked whether the frontend could send requests to the backend and display the returned responses correctly. | Confirmed the basic frontend-backend connection and recorded the final testing results. | Project source code, project testing notes |
+| Week 12 - Day 5 | Summarized final testing work | Organized final testing notes, summarized completed testing tasks, and prepared information for the final project report. | Completed my assigned QA testing tasks for the AWS Stock Analyzer project at a basic manual testing level. | Project testing notes, group discussion |
 
-* Used AWS CLI to perform basic operations such as:
+---
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### 3. Results Achieved
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+By the end of Week 12, I had completed all planned testing tasks for the **AWS Stock Analyzer** project.
+
+I reviewed and tested the main application flow, including frontend interface behavior, backend response behavior, input validation, and frontend-backend integration.
+
+The testing was performed manually and focused on checking whether the main features worked as expected. I also summarized the final testing results and prepared testing notes to support the final project report.
+
+Through this project, I understood more clearly the role of a **QA Tester** in a cloud-based application project.
+
+Although the testing was not advanced automation testing, I completed my assigned testing responsibilities and contributed to the final review of the AWS Stock Analyzer project.
+
+---
+
+### 4. Difficulties
+
+During the final testing stage, I needed to review many testing notes from previous weeks and make sure the main cases were checked again.
+
+Because the project involved both frontend and backend behavior, I had to observe the full user flow carefully instead of checking only one part of the system.
+
+---
+
+### 5. References
+
+- Project frontend interface
+- Project backend behavior
+- Project source code
+- Project testing notes
+- Group discussion
