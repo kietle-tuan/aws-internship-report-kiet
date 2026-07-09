@@ -1,57 +1,101 @@
 ---
-title : "Prepare the environment"
-date : 2024-01-01
-weight : 1
-chapter : false
-pre : " <b> 5.4.1 </b> "
+title: "Login and Dashboard Checking"
+date: 2024-01-01
+weight: 1
+chapter: false
+pre: " <b>5.4.1 </b> "
 ---
 
-To prepare for this part of the workshop you will need to:
-+ Deploying a CloudFormation stack 
-+ Modifying a VPC route table. 
+# 5.4.1 LOGIN AND DASHBOARD CHECKING
 
-These components work together to simulate on-premises DNS forwarding and name resolution.
+## Cognito Login and Initial Dashboard Review
 
-#### Deploy the CloudFormation stack
+---
 
-The CloudFormation template will create additional services to support an on-premises simulation:
-+ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3 endpoint
-+ One Route 53 Inbound Resolver endpoint that enables "VPC Cloud" to resolve inbound DNS resolution requests to the Private Hosted Zone
-+ One Route 53 Outbound Resolver endpoint that enables "VPC On-prem" to forward DNS requests for S3 to "VPC Cloud"
+## 1. Overview
 
-![route 53 diagram](/images/5-Workshop/5.4-S3-onprem/route53.png)
+This section describes the first testing step of the **AWS Stock Analyzer** application.
 
-1. Click the following link to open the [AWS CloudFormation console](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup). The required template will be pre-loaded into the menu. Accept all default and click Create stack.
+The purpose of this step was to access the deployed application, check the login page, log in through Amazon Cognito, and review whether the dashboard could display stock information correctly.
 
-![Create stack](/images/5-Workshop/5.4-S3-onprem/create-stack.png)
+In this step, I tested the system from the user perspective as a **QA Tester**.
 
-![Button](/images/5-Workshop/5.4-S3-onprem/create-stack-button.png)
+---
 
-It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.
+## 2. Accessing the Application
 
-#### Update on-premise private route table
+The application was accessed through the deployed CloudFront URL:
 
-This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the "VPC On-prem" routing table to direct traffic destined for the cloud to the strongSwan VPN instance.
+https://d3k9qj467czrvg.cloudfront.net/
 
-1. Open the Amazon EC2 console 
+The browser displayed the application page with the title:
 
-2. Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor
+**Stock Analyzer | Phân Tích Cổ Phiếu Thông Minh**
 
-![ec2 id](/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png)
+The login page showed a **Trader Console** screen and a button for Cognito login.
 
-3. Navigate to the VPC menu by using the Search box at the top of the browser window.
+![Cognito Login](../3.PNG)
 
-4. Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.
+---
 
-![rt](/images/5-Workshop/5.4-S3-onprem/rt.png)
+## 3. Cognito Login
 
-5. Click Add route.
-+ Destination: your Cloud VPC cidr range
-+ Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)
+The system used **Amazon Cognito** for authentication.
 
-![add route](/images/5-Workshop/5.4-S3-onprem/add-route.png)
+Since an internal user account was already available, the login process could be completed successfully.
 
-6. Click Save changes
+Checked items:
 
+- The application URL could be opened.
+- The Cognito login button was displayed.
+- The internal user could log in.
+- The dashboard was displayed after successful login.
 
+---
 
+## 4. Initial Dashboard Checking
+
+After logging in, I checked the main dashboard.
+
+At the beginning, the dashboard displayed only the stock symbol **FPT**.
+
+The checked items included:
+
+- Dashboard layout
+- Sidebar menu
+- Market summary section
+- Stock analysis table
+- Available stock symbol
+- Result display area
+
+The dashboard was readable and could show stock-related information.
+
+---
+
+## 5. Testing Observation
+
+The login and dashboard loading process worked successfully.
+
+The system allowed the internal user to access the dashboard, and the dashboard displayed the available stock data.
+
+At this stage, the dashboard only had limited stock data, so further testing was needed by submitting another stock symbol for analysis.
+
+---
+
+## 6. Result
+
+| Test Item | Expected Result | Status |
+|---|---|---|
+| Open CloudFront URL | Application opens normally | Passed |
+| Cognito login button | Login button is displayed | Passed |
+| User login | Internal user can log in | Passed |
+| Dashboard display | Dashboard loads after login | Passed |
+| Initial stock data | FPT stock data is displayed | Passed |
+
+---
+
+## 7. Conclusion
+
+The login and initial dashboard checking step was completed successfully.
+
+This confirmed that the deployed application could be accessed through CloudFront, the Cognito login flow worked, and the dashboard could display initial stock information.
