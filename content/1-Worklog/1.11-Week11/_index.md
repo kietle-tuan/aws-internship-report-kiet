@@ -1,57 +1,62 @@
 ---
-title: "Week 11 Worklog"
+title: "Week 11"
 date: 2024-01-01
-weight: 2
+weight: 11
 chapter: false
-pre: " <b> 1.11. </b> "
+pre: " <b>1.11 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 11 WORKLOG
 
-### Week 11 Objectives:
+## INTEGRATION TESTING FOR THE AWS STOCK ANALYZER PROJECT
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to check how the frontend and backend worked together in the **AWS Stock Analyzer** project.
 
-### Week 11 Achievements:
+As the **QA Tester**, I focused on testing the basic connection between user input on the frontend and the response returned from the backend.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+The testing was done manually and at a simple level to identify issues before the final review stage.
 
-* Successfully created and configured an AWS Free Tier account.
+---
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### 2. Tasks to Implement in the Week
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 11 - Day 1 | Reviewed frontend and backend flow | Checked the general flow from entering a stock symbol on the frontend to receiving a backend response. | Understood the basic integration flow of the AWS Stock Analyzer application. | Project notes, group discussion |
+| Week 11 - Day 2 | Tested valid stock symbol flow | Entered valid stock symbols and checked whether the application displayed the returned result properly. | Confirmed the basic behavior of the system when valid input was used. | Project testing notes |
+| Week 11 - Day 3 | Tested invalid input flow | Tried empty input and incorrect stock symbols to observe how the system handled errors. | Identified whether error handling was clear enough for users. | Project testing notes |
+| Week 11 - Day 4 | Checked result display | Reviewed whether stock-related results were shown in the correct section and were understandable for users. | Noted basic UI and response display issues that could be improved. | Project frontend interface |
+| Week 11 - Day 5 | Summarized integration testing results | Organized testing observations and shared feedback with the team for review. | Created simple integration testing notes to support final project improvement. | Group discussion, project testing notes |
 
-* Used AWS CLI to perform basic operations such as:
+---
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### 3. Results Achieved
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+By the end of Week 11, I had tested the basic integration between the frontend and backend of the **AWS Stock Analyzer** project.
+
+I checked how the system handled valid input, invalid input, backend responses, and result display.
+
+The testing was manual and focused on basic functionality rather than advanced testing tools or automation.
+
+This week helped the team review the application more clearly before the final project completion stage.
+
+---
+
+### 4. Difficulties
+
+During integration testing, I needed to check both the frontend behavior and the backend response at the same time.
+
+Some issues were not only related to the interface or the backend alone, but also related to how the two parts worked together. Because of that, I had to test slowly and record each case clearly.
+
+---
+
+### 5. References
+
+- Project frontend interface
+- Project backend behavior
+- Group discussion and project notes
+- Project testing notes
