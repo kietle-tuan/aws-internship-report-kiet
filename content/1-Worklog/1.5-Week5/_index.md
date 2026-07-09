@@ -1,57 +1,54 @@
 ---
-title: "Week 5 Worklog"
+title: "Week 5"
 date: 2024-01-01
-weight: 1
+weight: 5
 chapter: false
-pre: " <b> 1.5. </b> "
+pre: " <b>1.5 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 5 WORKLOG
 
-### Week 5 Objectives:
+## REVIEWING AWS APPLICATION ARCHITECTURE AND BASIC DEPLOYMENT CONCEPTS
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to review how different AWS services can be combined to support a basic cloud application. During this week, I mainly watched YouTube tutorials and read AWS learning materials.
 
-### Week 5 Achievements:
+The focus was to understand basic application architecture, deployment flow, and the role of each AWS service in a simple system.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### 2. Tasks to Implement in the Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 5 - Day 1 | Reviewed basic cloud architecture | Watched tutorials about common AWS architecture patterns for small web applications. | Understood how cloud services can be arranged to support an application at a basic level. | YouTube playlist, AWS Study Group |
+| Week 5 - Day 2 | Studied the role of frontend and backend | Read materials and watched videos explaining how frontend, backend, and cloud services work together. | Understood the basic relationship between client-side interface, backend API, and cloud infrastructure. | YouTube tutorials |
+| Week 5 - Day 3 | Reviewed database-related concepts | Watched tutorials introducing cloud database concepts and how applications store and retrieve data. | Gained a basic understanding of why databases are important in cloud-based systems. | YouTube playlist, AWS Study Group |
+| Week 5 - Day 4 | Learned about deployment workflow | Studied basic steps involved in deploying an application, including configuration, testing, and monitoring. | Understood that deployment requires preparation, service configuration, and checking system behavior after running. | AWS Study Group, YouTube tutorials |
+| Week 5 - Day 5 | Summarized learned AWS concepts | Reviewed previous learning notes about IAM, EC2, S3, VPC, Security Groups, and CloudWatch. | Connected the basic concepts from previous weeks and prepared for choosing a project topic later. | AWS Study Group, YouTube playlist |
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### 3. Results Achieved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+By the end of Week 5, I had a clearer overview of how AWS services can support a basic application. I mainly learned through YouTube tutorials and reading materials, so my understanding was still mostly theoretical.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+I did not perform advanced implementation during this week, but I was able to connect concepts such as compute, storage, networking, security, and monitoring.
+
+This week helped me prepare for the next stage, where I would review AWS knowledge and start thinking about a suitable final project direction.
+
+---
+
+### 4. Difficulties
+
+During this week, I found it difficult to fully understand how all AWS services are connected in a real application. Some architecture examples were still quite complex, so I focused on understanding the basic role of each service instead of trying to master the full deployment process.
+
+---
+
+### 5. References
+
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
