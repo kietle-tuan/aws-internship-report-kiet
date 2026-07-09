@@ -1,57 +1,57 @@
 ---
-title: "Week 10 Worklog"
+title: "Week 10"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
-pre: " <b> 1.10. </b> "
+pre: " <b>1.10 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 10 WORKLOG
 
-### Week 10 Objectives:
+## TESTING FRONTEND INTERFACE FOR THE AWS STOCK ANALYZER PROJECT
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to test the frontend interface of the **AWS Stock Analyzer** project.
 
-### Week 10 Achievements:
+As the **QA Tester**, I focused on checking the basic user interface, input fields, buttons, page display, and user interaction flow. The purpose was to make sure the application interface was understandable and worked correctly at a basic level.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### 2. Tasks to Implement in the Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 10 - Day 1 | Reviewed frontend testing scope | Checked the main pages and features that needed to be tested on the frontend side. | Understood the parts of the interface that should be checked first. | Project notes, group discussion |
+| Week 10 - Day 2 | Tested page display | Checked whether the main page, layout, text, and result sections displayed correctly. | Observed the basic page layout and noted small UI issues if found. | Project frontend interface |
+| Week 10 - Day 3 | Tested input fields | Tried entering valid, empty, and incorrect stock symbol inputs into the application. | Checked how the frontend handled different user input cases. | Project testing notes |
+| Week 10 - Day 4 | Tested buttons and user actions | Checked basic user actions such as clicking buttons and submitting stock search requests. | Confirmed whether the buttons responded correctly and whether the user flow was understandable. | Project frontend interface |
+| Week 10 - Day 5 | Recorded frontend testing results | Wrote down frontend testing observations and shared feedback with the team. | Created simple frontend testing notes to support UI improvement and bug fixing. | Group discussion, project testing notes |
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### 3. Results Achieved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+By the end of Week 10, I had tested the basic frontend interface of the **AWS Stock Analyzer** project.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+I checked the page display, input fields, buttons, and simple user interactions. The testing was performed manually and focused on basic usability and correctness, not advanced automation testing.
+
+This week helped identify possible frontend issues and made the application easier to review before final testing.
+
+---
+
+### 4. Difficulties
+
+During frontend testing, I needed to check the interface carefully because some issues were small and easy to miss, such as unclear layout, empty input behavior, or button response.
+
+I also needed to compare the expected behavior with the actual result to record feedback clearly for the team.
+
+---
+
+### 5. References
+
+- Project frontend interface
+- Group discussion and project notes
+- Project testing notes
