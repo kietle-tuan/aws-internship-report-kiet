@@ -1,57 +1,58 @@
 ---
-title: "Week 8 Worklog"
+title: "Week 8"
 date: 2024-01-01
-weight: 1
+weight: 8
 chapter: false
-pre: " <b> 1.8. </b> "
+pre: " <b>1.8 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+# WEEK 8 WORKLOG
 
-### Week 8 Objectives:
+## PREPARING TEST CASES FOR THE AWS STOCK ANALYZER PROJECT
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 1. Weekly Goals
 
+The goal of this week was to continue working on the **AWS Stock Analyzer** project from the **QA Tester** perspective.
 
-### Week 8 Achievements:
+I focused on understanding the main features of the application and preparing basic test cases for later testing. The testing preparation was kept simple and suitable for my role, mainly covering user interface checking, input validation, and expected system behavior.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+---
 
-* Successfully created and configured an AWS Free Tier account.
+### 2. Tasks to Implement in the Week
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+| Day / Date | Work Content | Task Details | Results Achieved | Reference Sources |
+|---|---|---|---|---|
+| Week 8 - Day 1 | Reviewed project features | Reviewed the main features of the AWS Stock Analyzer application with the team. | Understood which parts of the application should be checked during testing. | Group discussion, project notes |
+| Week 8 - Day 2 | Prepared basic UI test ideas | Listed simple UI areas to check, such as page display, buttons, input fields, and result sections. | Created a basic direction for frontend testing. | Online QA materials |
+| Week 8 - Day 3 | Prepared input validation test ideas | Considered possible input cases, including valid stock symbols, empty input, and invalid input. | Identified basic cases that should be tested to check how the system handles user input. | Online QA materials, project notes |
+| Week 8 - Day 4 | Reviewed backend response expectations | Discussed with the team about how the system should respond when receiving stock-related requests. | Understood the basic expected behavior of backend responses at a simple level. | Group discussion |
+| Week 8 - Day 5 | Organized testing notes | Organized initial testing notes and prepared for actual testing when the project features became available. | Had a clearer plan for checking the application in the next weeks. | Project notes |
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+---
 
-* Used AWS CLI to perform basic operations such as:
+### 3. Results Achieved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+By the end of Week 8, I had prepared a basic testing direction for the **AWS Stock Analyzer** project.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+I reviewed the expected features and created simple test ideas for the user interface, input validation, and backend responses.
+
+I did not perform advanced automation testing during this week. The main result was that I became more prepared to test the application when the frontend and backend functions were ready.
+
+---
+
+### 4. Difficulties
+
+During this week, some project features were still being prepared, so I could not test all functions in detail yet.
+
+Because of that, I focused on preparing test ideas and organizing notes so that I could test the application more effectively in the following weeks.
+
+---
+
+### 5. References
+
+- Group discussion and project notes
+- Online QA testing materials
+- [AWS Study Group](https://000001.awsstudygroup.com/vi/)
+- [AWS Cloud Computing YouTube Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox3TSYFbN1DNX7NZgTVXNj3x)
