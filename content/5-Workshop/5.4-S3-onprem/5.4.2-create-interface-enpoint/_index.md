@@ -1,43 +1,78 @@
 ---
-title : "Create an S3 Interface endpoint"
-date : 2024-01-01
-weight : 2
-chapter : false
-pre : " <b> 5.4.2 </b> "
+title: "Stock Analysis Request"
+date: 2024-01-01
+weight: 2
+chapter: false
+pre: " <b>5.4.2 </b> "
 ---
 
-In this section you will create and test an S3 interface endpoint using the simulated on-premises environment deployed as part of this workshop.
+# 5.4.2 Stock Analysis Request
 
-1. Return to the Amazon VPC menu. In the navigation pane, choose Endpoints, then click Create Endpoint.
+## Overview
 
-2. In Create endpoint console:
-+ Name the interface endpoint
-+ In Service category, choose **aws services** 
+After logging in successfully, I continued testing the stock analysis function on the dashboard.
 
-![name](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint1.png)
+In this step, my role was mainly as a **QA Tester**. I focused on checking whether the user interface allowed a user to select another stock code and send an analysis request correctly.
 
-3.  In the Search box, type S3 and press Enter. Select the endpoint named com.amazonaws.us-east-1.s3. Ensure that the Type column indicates Interface.
+The dashboard initially displayed stock information for **FPT**. After that, I selected another stock symbol, **VNM**, to verify the analysis flow.
 
-![service](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint2.png)
+---
 
-4. For VPC, select VPC Cloud from the drop-down.
-{{% notice warning %}}
-Make sure to choose "VPC Cloud" and not "VPC On-prem"
-{{% /notice %}}
-+ Expand **Additional settings** and ensure that Enable DNS name is *not* selected (we will use this in the next part of the workshop)
+## Testing Objective
 
-![vpc](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint3.png)
+The objective of this test was to verify that:
 
-5. Select 2 subnets in the following AZs: us-east-1a and us-east-1b
+- The dashboard could display the analysis section correctly.
+- A user could select or enter another stock symbol.
+- The system could receive the stock analysis request.
+- The frontend could show the response after clicking the analysis button.
 
-![subnets](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint4.png)
+---
 
-6. For Security group, choose SGforS3Endpoint:
+## Testing Steps
 
-![sg](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint5.png)
+The testing process was performed manually with the following steps:
 
-7. Keep the default policy - full access and click Create endpoint
+1. Logged in to the system using the test account.
+2. Opened the dashboard page.
+3. Observed that the dashboard initially showed stock data for **FPT**.
+4. Opened the stock analysis section.
+5. Selected the stock symbol **VNM** for analysis.
+6. Selected the timeframe if the option was available.
+7. Clicked the **Analyze** button.
+8. Observed the response displayed on the dashboard.
 
-![success](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint-success.png)
+---
 
-Congratulation on successfully creating S3 interface endpoint. In the next step, we will test the interface endpoint.
+## Testing Evidence
+
+The following image shows the stock analysis request on the dashboard.
+
+![Stock Analysis Request](../4.PNG)
+
+---
+
+## Expected Result
+
+The expected result was that the system should:
+
+- Accept the selected stock symbol.
+- Send the analysis request to the backend.
+- Process the selected stock data.
+- Return the analysis result to the dashboard.
+
+---
+
+## Actual Result
+
+The system allowed me to select **VNM** and submit the analysis request from the dashboard.
+
+The frontend was able to trigger the request and display the returned result. This confirmed that the basic interaction between the dashboard and the analysis function was working.
+
+---
+
+## QA Tester Notes
+
+From the testing perspective, this step helped confirm that the stock analysis feature could be used from the user interface.
+
+However, this test only focused on the manual checking of the request flow from the frontend. The detailed backend flow, including Lambda, S3, SQS, DynamoDB, and CloudWatch logs, is checked in the next section.
