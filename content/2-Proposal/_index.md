@@ -30,7 +30,7 @@ pre: " <b>2. </b> "
 This project proposes building **AWS Stock Analyzer**, a web-based stock analysis and alert system using AWS cloud services.
 
 The system is designed to help users enter a stock symbol, retrieve stock-related information, process basic analysis, and display the result through a web interface.
-
+The backend logic of the project is mainly implemented using **Node.js** with AWS Lambda serverless functions.
 The project is mainly used for academic and internship purposes. It helps the team understand how frontend, backend, data processing, and AWS cloud services can work together in a simple application.
 
 In this project, my role is **QA Tester**. My responsibility is to support the team by testing the main functions of the application, including frontend behavior, backend API response, input validation, and frontend-backend integration.
@@ -53,12 +53,12 @@ The proposed solution is to build a simple cloud-based stock analysis applicatio
 
 The basic workflow is described as follows:
 
-1. The user enters a stock symbol on the web interface.
-2. The frontend sends the request to the backend API.
-3. The backend receives and processes the request.
-4. Stock-related data is retrieved or analyzed.
-5. The backend returns the result to the frontend.
-6. The frontend displays the result to the user.
+1. The user enters or selects a stock symbol on the web interface.
+2. The frontend sends the request to the backend API through Amazon API Gateway.
+3. The backend receives and processes the request using AWS Lambda functions written mainly in Node.js.
+4. Stock-related data is retrieved from Yahoo Finance API.
+5. The backend processes the data and stores or returns the analysis result.
+6. The frontend displays the result to the user through the dashboard.
 
 The system is expected to include:
 
@@ -82,7 +82,7 @@ The main components include:
 |---|---|
 | Frontend | Provides the user interface for entering stock symbols and viewing results |
 | Backend API | Receives requests from the frontend and returns responses |
-| Data Processing | Handles stock-related logic and prepares analysis results |
+| Data Processing | Uses Node.js-based AWS Lambda functions to handle stock-related logic and prepare analysis results |
 | Database / Storage | Stores stock data, analysis results, or system records if needed |
 | AWS Cloud Services | Support hosting, API communication, storage, processing, and monitoring |
 | QA Testing | Checks whether the application works correctly from the user perspective |
@@ -100,7 +100,7 @@ The project architecture may involve the following AWS services:
 | AWS WAF | Help protect the frontend from common web attacks |
 | Amazon Cognito | Support user authentication and login |
 | Amazon API Gateway | Provide API endpoints for frontend-backend communication |
-| AWS Lambda | Handle ingestion, processing, and backend logic |
+| AWS Lambda | Run Node.js serverless functions for ingestion, processing, and backend logic |
 | Amazon SQS | Support asynchronous message queue processing |
 | Amazon DynamoDB | Store processed stock analysis data |
 | AWS KMS | Support encryption and data protection |
